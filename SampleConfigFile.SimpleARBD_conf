@@ -1,0 +1,47 @@
+#################################################
+#--In this configuration file for SimpleARBD, --#
+#--a space ' ' is interpreted as a delimiter. --#
+#################################################
+
+#########################
+# Set up for ARBD files #
+#########################
+
+Diffusible_objects: cyt_c
+Static_objects (Enter NA for no static object): NA
+SaltConcentration: 0.15
+Temperature (K): 300
+Viscosity: 0.01
+Solvent_density: 1
+Number_of_heavy_cluster (Integer): 3
+GaussianWidth: 2.5
+Skip_parametrizing_diffusible (Yes/No): No
+Gigantic_stat_objects (Yes/No): Yes
+Python_path: /Scr/cmaffeo2/anaconda3/bin/python
+Hydro_path: /Scr/delcck/SimpleARBD_project/hydropro10-lnx.exe
+Apbs_path: /Common/linux/bin/apbs
+Vmd_path: /Common/linux/bin/vmd
+Parameters_folder: ./parameters
+
+########################
+# Set up for ARBD runs #
+########################
+Num_replicas (Integer): 16
+Timestep (Float): 0.0002
+Steps (Integer): 20000000
+Interactive (Yes/No): No
+Grid_path: null.dx
+Number_of_copies_per_object (Integer(s)): 25
+Extra_potentials_tags (Path, vdw cluster group): (boundary.dx, vdw0)
+WellDepth (Positive): 1
+WellResolution (Positive): 2
+CellBasisVector1: 490 0 0
+CellBasisVector2: 245 425 0
+CellBasisVector3: 0 0 253.11660533
+CellOrigin: 0 0 65
+InitialCoorBasisVector1: 490 0 0
+InitialCoorBasisVector2: 245 425 0
+InitialCoorBasisVector3: 0 0 0
+InitialCoorOrigin: 0 0 170
+ARBD_path: ~cmaffeo2/scratch/arbd.dev/src/arbd
+Path_for_ARBD_simulations: /Scr/delcck/DOD/Module_3/Cyt_C_E_field

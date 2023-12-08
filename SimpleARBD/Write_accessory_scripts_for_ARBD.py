@@ -498,10 +498,12 @@ potentialGridScale elec 0.59616195'''
 densityGrid vdw''' + str(i) + ' ' + key + '.vdw' + str(i) + '''.den.dx
 ''' + interactive + 'potentialGrid vdw' + str(i) + ' ' + key + '.vdw' + str(i) + '''.pot.smoothed.dx
 potentialGridScale vdw''' + str(i) + ' 0.59616195'
+        text += '''
+
+'''
 
     if len(static_objects) > 0:
         text += '''
-
 # gridFile describes the environement potential. "elec", "vdw1" are labels that match the density of the moving particle to that of the environemnt'''
         for key in static_objects:
             text += '''

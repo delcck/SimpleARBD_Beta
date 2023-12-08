@@ -167,7 +167,7 @@ def Read_SimpleARBD_config(in_path):
     m = (re.search(r'Steps \(Integer\):(\s*[0-9]+)', text))
     Config['steps'] = m.group(1).strip()
     m = (re.search(r'Interactive \(Yes/No\):([ \w]+)', text))
-    if m.group(1) == 'Yes':
+    if m.group(1).strip() == 'Yes':
         Config['interactive'] = ''
     else:
         Config['interactive'] = '#'

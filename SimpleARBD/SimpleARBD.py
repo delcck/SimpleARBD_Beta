@@ -67,7 +67,7 @@ class SetupARBD(object):
                 os.system('unlink hydro.pdb')
                 #---Check if our key length exceed the file name length limit
                 hydroproFile = key + '.hydro-res.txt'
-                if len(key) > hydro_file_name_length_limit:
+                if len(key) >= hydro_file_name_length_limit:
                     hydroproFile = key[:hydro_file_name_length_limit] + '-res.txt'
                 massFile = key + '.mass.txt'
                 inertiaFile = key + '.inertia.txt'

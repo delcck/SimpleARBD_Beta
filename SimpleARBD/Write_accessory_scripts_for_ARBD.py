@@ -491,7 +491,7 @@ inertia ''' + ' '.join([str(elm) for elm in inertias[count]]) + '''
 transDamping ''' + ' '.join([str(elm) for elm in transDampings[count]]) + '''
 rotDamping ''' + ' '.join([str(elm) for elm in rotDampings[count]]) + '''
 densityGrid elec ''' + key + '''.charge.dx
-''' + interactive + 'potentiaGrid elec ' + key + '''.elec.smoothed.dx
+''' + interactive + 'potentialGrid elec ' + key + '''.elec.smoothed.dx
 potentialGridScale elec 0.59616195'''
         for i in range(num_heavy_cluster + 1):
             text += '''
